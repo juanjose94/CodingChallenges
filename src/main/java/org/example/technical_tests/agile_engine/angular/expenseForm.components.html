@@ -1,0 +1,19 @@
+<input
+  #itemInput
+  type="text"
+  placeholder="Item"
+  data-test-id="item-input"
+  [value]="item"
+  (input)="item = itemInput.value"
+/>
+<input
+  #amountInput
+  type="number"
+  placeholder="Amount"
+  data-test-id="amount-input"
+  [value]="amount"
+  (input)="amount = amountInput.value"
+/>
+<button type="button" data-test-id="submit-button" [disabled]="isInvalid" (click)="addExpense()">
+  Submit
+</button>

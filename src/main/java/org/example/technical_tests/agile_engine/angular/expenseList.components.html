@@ -1,0 +1,20 @@
+<tbody>
+  <tr
+    *ngFor="let expense of expenses; let i = index; trackBy: trackByValue"
+    data-test-id="expense-list-item"
+  >
+    <!-- Use below columns to display item and amount -->
+    <td class="item">{{ expense.item }}</td>
+    <td [ngClass]="expense.amount > 0 ? 'plus' : 'minus'">{{ expense.amount }}</td>
+    <td>
+      <button class="danger outlined" data-test-id="expense-list-delete" (click)="deleteExpense(i)">
+        Delete
+      </button>
+    </td>
+  </tr>
+  <tr class="total-expense">
+    <td>TOTAL</td>
+    <!-- Use below columns to display total amount -->
+    <td data-test-id="total-expense">{{ total }}</td>
+  </tr>
+</tbody>
