@@ -9,7 +9,7 @@ import org.bson.Document;
 public class Main_mongodb {
 
     public static void main(String[] args) {
-        String connectionString = "mongodb+srv://myAtlasDBUser:myPassword@myatlasclusteredu.j6c0jml.mongodb.net/?retryWrites=true&w=majority";
+        String connectionString = "";
         ServerApi serverApi = ServerApi.builder()
                 .version(ServerApiVersion.V1)
                 .build();
